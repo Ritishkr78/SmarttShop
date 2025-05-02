@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.price-drop {
+  color: #10b981;
+}
+
+.price-rise {
+  color: #ef4444;
+}
+
+.deal-score-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.deal-score-excellent {
+  background-color: #10b981;
+  color: white;
+}
+
+.deal-score-good {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.deal-score-average {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.deal-score-poor {
+  background-color: #ef4444;
+  color: white;
+}
+
+.retailer-logo {
+  width: 80px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Chart styles */
+.chart-container {
+  height: 300px;
+  width: 100%;
+}
+
+.prediction-area {
+  fill: rgba(59, 130, 246, 0.1);
+  stroke: none;
+}
+
+.price-line {
+  stroke: #3b82f6;
+  stroke-width: 2;
+  fill: none;
+}
+
+.prediction-line {
+  stroke: #3b82f6;
+  stroke-width: 2;
+  stroke-dasharray: 5 5;
+  fill: none;
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Search suggestion transitions */
+.search-suggestions {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.search-suggestions-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.search-suggestions-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.search-suggestions-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.search-suggestions-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+}
